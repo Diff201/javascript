@@ -1,34 +1,36 @@
-let age = 10;
-const size = 1.44;
-const myName = 'myName';
+console.log(typeof 1);
+console.log(typeof true);
+console.log(typeof '');
+console.log(typeof 'name');
+console.log(typeof (1 + 1));
+console.log(typeof (0 * 0));
+console.log(typeof 0.00000540001);
 
-console.log('1:', age);
-console.log('2:', String(age));
-console.log('3:', age);
+const a = 'true';
+const b = undefined;
+const c = false;
 
-age = String(age);
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
 
-console.log('4:', age);
+console.log(typeof Infinity);
+console.log(typeof NaN);
 
-age = Number(age);
+console.log(typeof String('1'));
+console.log(typeof Number('1'));
 
-console.log('5:', age);
+let d;
+console.log(typeof d);
 
-console.log('6:', Number('23'));
-console.log('7:', String(Number('qwerty')));
-console.log('8:', Number('0'));
-console.log('9:', Number('1'));
-console.log('10:', String(1));
-console.log('11:', Number(1));
-console.log('12:', String(Number(String(1))));
-console.log('13:', Number(String(Number(String(1)))));
+d = 'NULL';
+console.log(typeof d);
 
-console.log('14:', myName);
-console.log('15:', String(myName));
-console.log('16:', String(String(myName)));
-console.log('17:', Number(myName));
-console.log('18:', String(Number(myName)));
+d = undefined;
+console.log(typeof d);
 
-console.log('19:', String(size));
-console.log('20:', Number('12.45'));
-console.log('21:', Number('12,45'));
+d = 1;
+console.log(typeof d);
+
+console.log(typeof "");
+console.log(typeof ``);
