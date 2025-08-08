@@ -1,3 +1,3 @@
-const text = 'Кошка вылизывает лапы'
+const text = 'Кошка вылизывает лапы';
 
-console.log(text)
+console.log(text);
