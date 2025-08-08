@@ -13,7 +13,7 @@ console.log(typeof surname);
 
 console.log(`Привет!
 Смотрю сериал.
-Назыввается ${name}`);
+Называется ${name}`);
 
 const value = 'Gely';
 console.log( Number (value));
