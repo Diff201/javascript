@@ -1,0 +1,12 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "startm": "node src/main.js",
+    "starts": "node src/strings.js"
+  },
+  "dependencies": {
+    "chalk": "^5.5.0"
+  }
+}
