@@ -1,1 +1,1 @@
-export const data = new Date().toISOString();
+export const data1 = new Date().toISOString();
