@@ -6,7 +6,18 @@
     "startm": "node src/main.js",
     "starts": "node src/strings.js"
   },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 120,
+    "tabWidth": 2,
+    "endOfLine": "auto"
+  },
   "dependencies": {
-    "chalk": "^5.5.0"
+    "chalk": "^5.5.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2"
   }
 }
