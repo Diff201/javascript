@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "startm": "node src/main.js",
-    "starts": "node src/strings.js"
+    "start": "node src/main.js"
   },
   "prettier": {
     "singleQuote": true,
