@@ -1,3 +1,5 @@
-import { sayHi } from './function.js';
+import { sayHi, sayText, text } from './function.js';
 
 sayHi;
+
+sayText;
