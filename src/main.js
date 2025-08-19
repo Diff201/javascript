@@ -8,4 +8,4 @@ console.log(square(2));
 
 console.log(sum(23, 45));
 
-console.log(power(2, 8));
+console.log(power(2, 7));
