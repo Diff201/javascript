@@ -1,3 +1,9 @@
+// Функция генерация рандомного числа
+
+export const generateInteger = (min, max) => {
+  return Math.floor(Math.random() * (min, max) + min);
+};
+
 //1 Функция sayHi
 import chalk from 'chalk';
 
@@ -32,3 +38,21 @@ export const sayText = (text) => {
   console.log(styledText);
 };
 sayText(text);
+
+//3 Функция square
+
+export const square = (number) => {
+  return number ** 2;
+};
+
+//4 Функция sum
+
+export const sum = (a, b) => {
+  return a + b;
+};
+
+//5 Функция power
+
+export const power = (a, b) => {
+  return a ** b;
+};
