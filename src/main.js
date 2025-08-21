@@ -9,6 +9,7 @@ import {
   squareS,
   weatherReport,
 } from './numbers.js';
+import { compare } from './compares.js';
 
 sayHi;
 
@@ -46,3 +47,8 @@ weatherReport();
 weatherReport();
 weatherReport();
 weatherReport();
+
+console.log(compare(1, 1));
+console.log(compare(12, 333));
+console.log(compare(1, '1'));
+console.log(compare('ffff', 1));
