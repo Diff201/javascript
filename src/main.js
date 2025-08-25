@@ -10,6 +10,7 @@ import {
   weatherReport,
 } from './numbers.js';
 import { compare } from './compares.js';
+import { adultAge, FB, LeapYear, randomYear } from './if.js';
 
 sayHi;
 
@@ -52,3 +53,9 @@ console.log(compare(1, 1));
 console.log(compare(12, 333));
 console.log(compare(1, '1'));
 console.log(compare('ffff', 1));
+
+adultAge(generateInteger(15, 22));
+
+FB(generateInteger(9, 20));
+
+LeapYear();
