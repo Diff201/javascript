@@ -11,6 +11,7 @@ import {
 } from './numbers.js';
 import { compare } from './compares.js';
 import { adultAge, FB, LeapYear, randomYear } from './if.js';
+import { mup, namePerson } from './switches.js';
 
 sayHi;
 
@@ -59,3 +60,19 @@ adultAge(generateInteger(15, 22));
 FB(generateInteger(9, 20));
 
 LeapYear();
+
+console.log(namePerson('Patrick'));
+console.log(namePerson('squidward'));
+console.log(namePerson('patrick'));
+console.log(namePerson('sponge bob'));
+console.log(namePerson('mr.Crabs'));
+console.log(namePerson('plankton'));
+console.log(namePerson('plankiton'));
+
+console.log(mup('Запекается'));
+console.log(mup('Формируются чеки'));
+console.log(mup('Курьер в пути'));
+console.log(mup('Заказ доставлен'));
+console.log(mup('Курьер подъезжает'));
+console.log(mup('Назначаются повара'));
+console.log(mup('Поиск курьера'));
