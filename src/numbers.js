@@ -112,10 +112,10 @@ const total = calculateDesk(classes, pupils);
 
 // Функуция прогноз погоды
 
-//199 + (0 ... 602)
-//199 + 10 * (0 ... 60.2)
+//200 + (0 ... 600)
+//20 + 10 * (0 ... 60)
 export const weatherReport = () => {
-  const a = 199 + 10 * Math.round(Math.random() * 60.2);
+  const a = 10 * Math.round(19.9 + Math.random() * 60.2);
   const b = Math.random();
   const res = (a + b).toFixed(6);
   console.log(`${chalk.green('Прогноз погоды на TerraRandomis: Температура завтра')} ${chalk.blue(res + '°C')}`);
