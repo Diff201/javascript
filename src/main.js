@@ -9,9 +9,9 @@ import {
   squareS,
   weatherReport,
 } from './numbers.js';
-import { compare } from './compares.js';
 import { adultAge, FB, LeapYear, randomYear } from './if.js';
 import { mup, namePerson } from './switches.js';
+import { addProperty, compare, remove, user, user1, user2, user3, userInfo } from './objects.js';
 
 sayHi;
 
@@ -76,3 +76,38 @@ console.log(mup('Заказ доставлен'));
 console.log(mup('Курьер подъезжает'));
 console.log(mup('Назначаются повара'));
 console.log(mup('Поиск курьера'));
+
+console.log(user);
+console.log(user);
+console.log(user);
+console.log(user);
+console.log(user);
+console.log(user);
+console.log(user);
+console.log(user);
+
+console.log(userInfo);
+
+remove(user1, 'id');
+console.log(user1);
+remove(user1, 'age');
+console.log(user1);
+remove(user1, 'name');
+console.log(user1);
+
+addProperty(user2, 'adress', 'Ул.Миклухо-Маклая, 55');
+console.log(user2);
+addProperty(user2, 'age', '24');
+console.log(user2);
+addProperty(user2, 'id', '-22');
+console.log(user2);
+
+compare(user3, { id: 24 }, 'id');
+compare(user3, { id: 24, name: 'alex' }, 'name');
+compare({}, {}, 'address');
+
+user3.id = user3.name.length;
+compare({ id: 2 + 2, name: 'mikhail' }, user3, 'id');
+
+user3.address = Boolean(1);
+compare({ id: 2 + 2, name: 'mikhail', address: 1 }, user3, 'address');
