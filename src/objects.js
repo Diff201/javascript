@@ -1,7 +1,7 @@
 // Базовые операции
 import chalk from 'chalk';
 
-export let user = {
+export const user = {
   name: 'Ангелина',
   age: 24,
 };
@@ -43,16 +43,16 @@ user[newValue] = car;
 
 //Создайте объект из 3-5 полей, для которых значения возьмутся из одноимённых переменных. Используйте краткую запись.
 
-const FavoriteFood = 'sushi';
-const FavoriteDrink = 'Coke-Cola';
-const FavoriteCar = 'Toyota Celica';
-const FavoritePlace = 'Crimea';
+const favoriteFood = 'sushi';
+const favoriteDrink = 'Coke-Cola';
+const favoriteCar = 'Toyota Celica';
+const favoritePlace = 'Crimea';
 
 export const userInfo = {
-  FavoriteFood,
-  FavoriteDrink,
-  FavoriteCar,
-  FavoritePlace,
+  favoriteFood,
+  favoriteDrink,
+  favoriteCar,
+  favoritePlace,
 };
 
 // Функция Удаление поля
@@ -79,26 +79,27 @@ export const compare = (obj1, obj2, key) => {
     console.log(chalk.green(`У обоих объектов по ключу "${key}" лежит одинаковое значение - ${value1}`));
   } else {
     console.log(
-      chalk.red(`У объектов по ключу "${key}" разные значения. У первого - ${value1}, а у второго - ${value2}`),
+      chalk.red(`У объектов по ключу '${key}' разные значения. У первого - ${value1}, а у второго - ${value2}`),
     );
   }
 };
 
 export const user3 = { id: 24, name: 'Gely', address: 0 };
 
-compare(user3, { id: 24 }, 'id');
-compare(user3, { id: 24, name: 'alex' }, 'name');
-compare({}, {}, 'address');
+//compare(user3, { id: 24 }, 'id');
+//compare(user3, { id: 24, name: 'alex' }, 'name');
+//compare({}, {}, 'address');
 
 //Функция Программа переселения
 
 const resettlementProgram = (person) => {
   const { age, city, address } = person;
-  const adultAge = age >= 18;
   let newCity = city;
   let newStreet = address;
 
-  if (adultAge) {
+  if (age >= 16 && age <= 17 && city === 'Москва') {
+    newCity = 'Кострома';
+  } else if (age >= 18) {
     if (city === 'Москва') {
       if (address.includes('Ленина')) {
         newCity = 'Москва';
@@ -110,15 +111,9 @@ const resettlementProgram = (person) => {
     } else {
       if (address.includes('Капиталистов')) {
         newCity = 'Москва';
-        newStreet = 'Материалистоа 3';
+        newStreet = 'Материалистов 3';
       } else {
         newStreet = 'Центральная 2';
-      }
-    }
-  } else {
-    if (age >= 16 && age <= 17) {
-      if (city === 'Москва') {
-        newCity = 'Кострома';
       }
     }
   }
@@ -135,4 +130,14 @@ resettlementProgram(user4);
 
 // Функция Возраст
 
-const dateBirth = () => {};
+export const calculateAge = (user) => {
+  console.log('Дата рождения:', user.dateOfBirth.getTime());
+  console.log('Сейчас', Date.now());
+
+  const diff = Date.now() - user.dateOfBirth.getTime();
+  console.log('Разница', diff);
+
+  const msInOneYear = 365 * 24 * 60 * 60 * 1000;
+  const years = Math.floor(diff / msInOneYear);
+  console.log('Количество полных лет:', years);
+};
