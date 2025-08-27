@@ -9,9 +9,9 @@ import {
   squareS,
   weatherReport,
 } from './numbers.js';
-import { adultAge, FB, LeapYear, randomYear } from './if.js';
+import { isAdultAge, fB, isLeapYear, randomYear } from './if.js';
 import { mup, namePerson } from './switches.js';
-import { addProperty, compare, remove, user, user1, user2, user3, userInfo } from './objects.js';
+import { addProperty, calculateAge, compare, remove, user, user1, user2, user3, userInfo } from './objects.js';
 
 sayHi;
 
@@ -50,16 +50,16 @@ weatherReport();
 weatherReport();
 weatherReport();
 
-console.log(compare(1, 1));
-console.log(compare(12, 333));
-console.log(compare(1, '1'));
-console.log(compare('ffff', 1));
+//console.log(compare(1, 1));
+//console.log(compare(12, 333));
+//console.log(compare(1, '1'));
+//console.log(compare('ffff', 1));
 
-adultAge(generateInteger(15, 22));
+isAdultAge(generateInteger(15, 22));
 
-FB(generateInteger(9, 20));
+fB(generateInteger(9, 20));
 
-LeapYear();
+isLeapYear();
 
 console.log(namePerson('Patrick'));
 console.log(namePerson('squidward'));
@@ -111,3 +111,28 @@ compare({ id: 2 + 2, name: 'mikhail' }, user3, 'id');
 
 user3.address = Boolean(1);
 compare({ id: 2 + 2, name: 'mikhail', address: 1 }, user3, 'address');
+
+const alex = {
+  name: 'Alex',
+  dateOfBirth: new Date('2024-05-15'),
+};
+
+const jake = {
+  name: 'Jake',
+  dateOfBirth: new Date('1970-01-01T00:00:00.000Z'),
+};
+
+const john = {
+  name: 'John',
+  dateOfBirth: new Date('2007-12-30T11:32:59.953+03:00'),
+};
+
+const bob = {
+  name: 'Bob',
+  dateOfBirth: new Date(),
+};
+
+calculateAge(alex);
+calculateAge(bob);
+calculateAge(jake);
+calculateAge(john);
