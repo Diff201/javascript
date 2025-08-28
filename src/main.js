@@ -12,6 +12,7 @@ import {
 import { isAdultAge, fB, isLeapYear, randomYear } from './if.js';
 import { mup, namePerson } from './switches.js';
 import { addProperty, calculateAge, compare, remove, user, user1, user2, user3, userInfo } from './objects.js';
+import { arrayJoin, arrayJoin1, max, setNickname, user6 } from './array.js';
 
 sayHi;
 
@@ -136,3 +137,12 @@ calculateAge(alex);
 calculateAge(bob);
 calculateAge(jake);
 calculateAge(john);
+
+console.log(arrayJoin.join('_'));
+console.log(arrayJoin1.join('-'));
+
+setNickname(user6, 'Александр Сильвестрович');
+console.log(user6);
+
+setNickname(max, 'Franz');
+console.log(max);
