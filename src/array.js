@@ -1,4 +1,6 @@
 // Функция Соединитель
+import chalk from 'chalk';
+
 export const arrayJoin = ['max', 'john', 123, null];
 console.log(arrayJoin.join('_'));
 
@@ -49,14 +51,45 @@ console.log(list2);
 
 //Функция Ресторан
 
-const cheque = {
-  food: [''],
-  snacks: [''],
-  drinks: [''],
-};
-
 const divider = '----------';
 
-const chequeForCook = {
-  if ('food' in cheque)
+const cheque = {
+  food: ['Сырный суп', 'Бургер', 'Лазанья'],
+  drinks: ['Пиво', 'Молочный коктейль'],
+};
+
+if ('food' in cheque) {
+  cheque.food.includes('Бургер') && !cheque.food.includes('Картошка фри');
+  {
+    if ('snacks' in cheque) {
+      cheque.snacks.push('Картошка фри');
+    } else {
+      cheque.snacks = ['Картошка фри'];
+    }
+  }
+  if (cheque.food.includes('Сырный суп') && !cheque.food.includes('Хлеб')) {
+    if ('snacks' in cheque) {
+      cheque.snacks.push('Хлеб');
+    } else {
+      cheque.snacks = ['Хлеб'];
+    }
+  }
+  console.log(divider);
+  console.log(chalk.italic.bgGreen(`Основные блюда (${cheque.food.length}):`));
+  console.log(chalk.bold(cheque.food.join(', ')));
 }
+
+if (cheque.snacks) {
+  console.log(divider);
+  console.log(chalk.italic.bgBlue(`Закуски (${cheque.snacks.length}):`));
+  console.log(chalk.bold(cheque.food.join(', ')));
+}
+if (cheque.drinks) {
+  console.log(divider);
+  console.log(chalk.italic.bgYellow(`Напитки (${cheque.drinks.length}):`));
+  console.log(chalk.bold(cheque.food.join(', ')));
+  if (cheque.drinks.includes('Пиво')) {
+    console.log(chalk.bold.red('!!Внимание: есть алкоголь!'));
+  }
+}
+console.log(divider);

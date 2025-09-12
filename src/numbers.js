@@ -110,7 +110,7 @@ const pupils = 7;
 const total = calculateDesk(classes, pupils);
 //console.log(`Для ${classes} классов по ${pupils} учеников в каждом, необходимо купить ${total}`);
 
-// Функуция прогноз погоды
+// Функция прогноз погоды
 
 //200 + (0 ... 600)
 //20 + 10 * (0 ... 60)
