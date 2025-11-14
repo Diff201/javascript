@@ -271,3 +271,46 @@ const theLongestArr = (user) => {
   return { maxLen: maxLength, lastValue: lastElement };
 };
 console.log(theLongestArr(user222));
+
+const compareArrays = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+
+    return true;
+  }
+};
+
+console.log(compareArrays([], []));
+console.log(compareArrays([true, null, 1, 'stop'], [true, null, 1, 'stop']));
+console.log(compareArrays([1, 2, 3], [2, 1, 3]));
+console.log(compareArrays([null], []));
+
+const compareObjects = (obj1, obj2) => {
+  for (const key in obj1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+
+  for (const key in obj2) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log(compareObjects({}, {}));
+console.log(compareObjects({ age: 45 }, { age: 45 }));
+console.log(compareObjects({ ready: true, photo: null }, { ready: true, photo: null }));
+console.log(compareObjects({ a: 10, b: 20, c: 30 }, { c: 30, a: 10, b: 20 }));
+console.log(compareObjects({ name: 'max' }, { name: 'john' }));
+console.log(compareObjects({ nick: 'maxon' }, {}));
+console.log(compareObjects({ age: 45, name: 'a' }, { age: 45, name: 'b' }));
