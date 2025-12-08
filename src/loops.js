@@ -281,9 +281,8 @@ const compareArrays = (arr1, arr2) => {
     if (arr1[i] !== arr2[i]) {
       return false;
     }
-
-    return true;
   }
+  return true;
 };
 
 console.log(compareArrays([], []));
@@ -314,3 +313,35 @@ console.log(compareObjects({ a: 10, b: 20, c: 30 }, { c: 30, a: 10, b: 20 }));
 console.log(compareObjects({ name: 'max' }, { name: 'john' }));
 console.log(compareObjects({ nick: 'maxon' }, {}));
 console.log(compareObjects({ age: 45, name: 'a' }, { age: 45, name: 'b' }));
+
+const compareObjectArrays = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (!compareObjects(arr1[i], arr2[i])) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const arr1 = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+];
+
+const arr2 = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+];
+
+const arr3 = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 35 },
+];
+
+console.log(compareObjectArrays(arr1, arr2));
+console.log(compareObjectArrays(arr1, arr3));
